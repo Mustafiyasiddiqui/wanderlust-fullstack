@@ -1,0 +1,149 @@
+ body {
+     font-family: "Plus Jakarta Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+     font-style: normal;
+ }
+
+ .navbar {
+     height: 5rem;
+     background-color: white;
+ }
+
+ .fa-brands {
+     color: #fe424d;
+     font-size: 2rem;
+ }
+
+ .nav-link {
+     color: #222222 !important;
+ }
+
+ .social {
+     color: #222222;
+     justify-content: center;
+ }
+
+ .f-info-links a {
+     text-decoration: none;
+     color: #222222;
+     justify-content: center;
+ }
+
+ .f-info-links a:hover {
+     text-decoration: underline;
+
+ }
+
+ footer {
+     background-color: #f8f8f8;
+     padding: 20px 0;
+
+ }
+
+ .f-info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     gap: 10px;
+ }
+
+ .f-info-socials {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+ }
+
+
+
+ /* cards */
+
+ .card {
+     border: none !important;
+     margin-top: 3rem !important;
+ }
+
+ .card-img-top {
+     border-radius: 1rem !important;
+     width: 100% !important;
+     object-fit: cover !important;
+ }
+
+ .card-body {
+     padding: 0 !important;
+ }
+
+ .card-text {
+     font-weight: 400 !important;
+ }
+
+
+ .listing-link {
+     text-decoration: none;
+ }
+
+ /* overlay effect on card */
+
+ .card-img-overlay {
+     opacity: 0;
+ }
+
+ .card-img-overlay:hover {
+     opacity: 0.2;
+     background-color: white;
+ }
+
+
+ /* new listing form */
+ .add-btn {
+     background-color: #fe424d !important;
+     border: none !important;
+ }
+
+ .edit-btn {
+     background-color: #fe424d !important;
+     border: none !important;
+
+ }
+
+ /* show page */
+ .show-img {
+     height: 40vh !important;
+
+ }
+
+ .dlt-btn {
+     background-color: black !important;
+     border: none !important;
+
+ }
+
+ .show-cars-img {
+     margin-top: 0 !important;
+     padding-top: 0 !important;
+ }
+
+ .show-card-img {
+     margin-top: 0 !important;
+     padding-top: 0 !important;
+ }
+
+ .show-card {
+     margin-top: 0 !important;
+     padding-top: 0 !important;
+ }
+
+ .img-card {
+     margin-top: 0 !important;
+     padding-top: 0 !important;
+     width: 100% !important
+ }
+
+ .review-card {
+     border: 1px solid black !important;
+     padding: 15px !important;
+     margin-top: 1rem !important;
+
+ }
