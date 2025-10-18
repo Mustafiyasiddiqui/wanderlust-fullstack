@@ -63,7 +63,7 @@ module.exports.isReviewAuthor = async (req, res, next) => {
   // console.log("Listing owner:", listing.owner);
   // console.log("Logged in user:", req.user);
 
-  if (!review.author._id.equals(req.locals.currUser._id)) {
+  if (!req.user || !review.author._id.equals(req.user._id)) {
     req.flash("error", "You don't have access to DELETE the review.");
     return res.redirect(`/listings/${id}`);
   }
