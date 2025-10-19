@@ -156,3 +156,13 @@
      margin-top: 1rem !important;
 
  }
+
+
+ /* map */
+
+
+ #map {
+     height: 300px;
+     width: 100vh;
+
+ }
