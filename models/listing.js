@@ -39,6 +39,10 @@ const listingSchema = new Schema({
       required: true,
     },
   },
+    categories:[String]
+ 
+      
+  
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {

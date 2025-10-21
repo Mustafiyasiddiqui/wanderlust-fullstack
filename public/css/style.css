@@ -5,6 +5,7 @@
      font-style: normal;
 
  }
+ 
 
  .navbar {
      height: 5rem;
@@ -71,9 +72,10 @@
 
  .card {
      border: none !important;
-     margin-top: 3rem !important;
+     margin-top: 1rem !important; 
  }
-
+ 
+ 
  .card-img-top {
      border-radius: 1rem !important;
      width: 100% !important;
@@ -165,4 +167,25 @@
      height: 300px;
      width: 100vh;
 
+ }
+
+ /*  dragging function for navbar  */
+
+ .line-vertical {
+    display: flex;
+    gap: 10px;
+    user-select: none;
+    position:relative;
+
+ }
+
+ .drag a {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    position: relative;
+    text-decoration: none;
+    color: #222222;
  }

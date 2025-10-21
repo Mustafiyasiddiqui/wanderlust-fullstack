@@ -19,6 +19,7 @@ const upload = multer({ dest: "uploads/" });
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const categoryRouter = require("./routes/category.js")
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -69,10 +70,10 @@ app.use((req, res, next) => {
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
+app.use("/", categoryRouter );
 
-app.get("/", (req, res) => {
-  res.send(" root is working");
-});
+// 
+
 
 app.all(/.*/, (req, res, next) => {
   next(new ExpressError(404, "page not found"));

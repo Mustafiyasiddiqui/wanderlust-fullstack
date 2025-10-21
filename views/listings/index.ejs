@@ -1,11 +1,151 @@
 <% layout('layouts/boilerplate') %>
 
-    <body>
-        <h3>All Listings</h3>
+    <style>
+        #filters{
+            display: flex;
+        }
+        .filter{
+            text-align: center;
+            align-items: center;
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+        .filter:hover{
+            opacity:1;
+            cursor: pointer;
+        }
+        .icon-text {
+            font-size: 15px;
+
+        }
+    </style>
+        <!-- <h3>All Listings</h3> -->
+         <div id="filters" class="line">
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/farms">
+                    <div><i class="fa-solid fa-tractor"></i></div>
+                <p class="icon-text">Farms</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/trending">
+                     <div><i class="fa-solid fa-fire"></i></div>
+                <p class="icon-text">Trending</p>
+                </a>
+               
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/rooms">
+                    <div><i class="fa-solid fa-bed"></i></div>
+                <p class="icon-text">Rooms</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/iconic-cities">
+                    <div><i class="fa-solid fa-building"></i></div>
+                <p class="icon-text">Iconic-Cities</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/volleyball">
+                    <div><i class="fa-solid fa-volleyball"></i></div>
+                <p class="icon-text">Volleyball</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/beach">
+                    <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p class="icon-text">Beach</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/pools">
+                    <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p class="icon-text">Pools</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/cabins">
+                    <div><i class="fa-solid fa-house"></i></div>
+                <p class="icon-text">Cabins</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/table-tennis">
+                    <div><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
+                <p class="icon-text">Table-Tennis</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/mountains">
+                    <div><i class="fa-solid fa-mountain-sun"></i></div>
+                <p class="icon-text">Mountains</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/castels">
+                    <div><i class="fa-solid fa-web-awesome"></i></div>
+                <p class="icon-text">Castles</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/camping">
+                    <div><i class="fa-solid fa-campground"></i></div>
+                <p class="icon-text">Camping</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/jungle">
+                    <div><i class="fa-solid fa-tree"></i></div>
+                <p class="icon-text">Jungle</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/arctic">
+                    <div><i class="fa-solid fa-snowflake"></i></div>
+                <p class="icon-text">Arctic</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/gifts">
+                    <div><i class="fa-solid fa-gift"></i></div>
+                <p class="icon-text">Gifts</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag">
+                <a href="/listings/category/child-friendly">
+                    <div><i class="fa-solid fa-children"></i></div>
+                <p class="icon-text">Child-Friendly</p>
+                </a>
+                
+            </div>
+            <div class="filter mt-3 drag" >
+                <a href="/listings/category/verified">
+                    <div><i class="fa-solid fa-thumbs-up"></i></div>
+                <p class="icon-text">Verified</p>
+                </a>
+                
+            </div>
+         </div>
         <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
             <!-- forloop -->
             <% for (let listing of allListings){ %>
-                <div class="col">
+                <div class="col card-column">
                     <!-- a tag containing the whole card link -->
                     <a href="/listings/<%=listing._id%>" class="listing-link">
                         <!-- card -->
@@ -36,7 +176,7 @@
 
         </div>
 
+        <script src="/js/filter.js"></script>
 
 
 
-    </body>

@@ -50,6 +50,15 @@
                         required />
                     <div class="invalid-feedback">location should be valid</div>
                 </div>
+                <div class="mb-3">
+                    <label for="categories" class="form-label">Category</label>
+                    <select name="listings[categories][]" id="categories"class="form-select" multiple required>
+                        <option value="">Select a category</option>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category %>"><%= category %></option>
+                            <% }) %>
+                    </select>
+                </div>
 
                 <button class="btn btn-dark add-btn">ADD</button>
             </form>
