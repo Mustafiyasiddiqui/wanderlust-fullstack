@@ -14,12 +14,11 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
-
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
-const categoryRouter = require("./routes/category.js")
+const categoryRouter = require("./routes/category.js");
+const searchRouter = require("./routes/search.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -67,13 +66,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/listings/search", searchRouter);
+app.use("/listings/category", categoryRouter);
 app.use("/listings", listingRouter);
+
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
-app.use("/", categoryRouter );
 
-// 
-
+//
 
 app.all(/.*/, (req, res, next) => {
   next(new ExpressError(404, "page not found"));
