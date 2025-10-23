@@ -6,8 +6,6 @@ const ExpressError = require("./utils/ExpressError.js");
 const { reviewSchema } = require("./schema.js");
 
 module.exports.validateListing = async (req, res, next) => {
-  const categories = await category.find().select("name -_id");
-  const validNames = categories.map((c) => c.name);
   let { error } = listingSchema.validate(req.body);
 
   if (error) {

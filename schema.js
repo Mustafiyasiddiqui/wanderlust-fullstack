@@ -1,4 +1,6 @@
 const joi = require("joi");
+const categories = await category.find().select("name -_id");
+const validNames = categories.map((c) => c.name);
 
 module.exports.listingSchema = joi.object({
   listings: joi
