@@ -37,9 +37,13 @@ npm install
 Create a .env file with:
 
 ATLASDB_URL=<your-mongodb-atlas-connection-string>
+
 CLOUDINARY_CLOUD_NAME=<name>
+
 CLOUDINARY_API_KEY=<key>
+
 CLOUDINARY_API_SECRET=<secret>
+
 SESSION_SECRET=<secret>
 
 
