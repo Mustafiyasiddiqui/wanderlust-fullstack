@@ -1,6 +1,6 @@
 const joi = require("joi");
-const categories = await category.find().select("name -_id");
-const validNames = categories.map((c) => c.name);
+// const categories = await category.find().select("name -_id");
+// const validNames = categories.map((c) => c.name);
 
 module.exports.listingSchema = joi.object({
   listings: joi
@@ -13,9 +13,32 @@ module.exports.listingSchema = joi.object({
       country: joi.string().required(),
       categories: joi
         .array()
-        .items(joi.string().valid(...validNames))
+        .items(
+          joi
+            .string()
+            .valid(
+              "farms",
+              "trending",
+              "rooms",
+              "iconic-cities",
+              "volleyball",
+              "beach",
+              "pools",
+              "cabins",
+              "table-tennis",
+              "mountains",
+              "castles",
+              "camping",
+              "jungle",
+              "arctic",
+              "gifts",
+              "child-friendly",
+              "verified"
+            )
+        )
         .min(1)
-        .max(2),
+        .max(2)
+        .required(),
     })
     .required(),
 });
@@ -29,6 +52,9 @@ module.exports.reviewSchema = joi.object({
     .required(),
 });
 
-// categories: joi.array().items(joi.string().valid("farms","trending","rooms","iconic-cities","volleyball",
-//         "beach","pools","cabins","table-tennis","mountains",
-// "castles","camping","jungle","arctic","gifts","child-friendly","verified")).min(1).max(2).required()
+// categories: joi
+//         .array()
+//         .items(joi.string().valid(...validNames))
+//         .min(1)
+//         .max(2),
+//     })
