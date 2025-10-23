@@ -52,10 +52,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="categories" class="form-label">Category</label>
-                    <select name="listings[categories][]" id="categories"class="form-select" multiple required>
+                    <select name="listings[categories][]" id="categories" class="form-select" multiple required>
                         <option value="">Select a category</option>
-                        <% categories.forEach(category => { %>
-                            <option value="<%= category %>"><%= category %></option>
+                        <% categories.forEach(category=> { %>
+                            <option value="<%= category %>">
+                                <%= category.name %>
+                            </option>
                             <% }) %>
                     </select>
                 </div>
