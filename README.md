@@ -2,7 +2,7 @@ Wanderlust ✈️
 
 A travel booking web app inspired by Airbnb. Browse, book, and review unique stays around the world. Built with Node.js, Express, MongoDB, and EJS.
 
-Live Demo:- https://wanderlust-fullstack-3bkt.onrender.com
+Live Demo:- https://wanderlust-fullstack-3bkt.onrender.com/listings
 
 Features
 
